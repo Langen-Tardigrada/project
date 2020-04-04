@@ -1,0 +1,18 @@
+.nameHotel{
+    height: 90px;
+    margin: 100px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+}
+
+.center{
+    margin: auto;
+    padding: 10px;
+    width: 60%;
+    border: 1px;
+    border-color: #31312E;
+    background-color: #CFD6C9;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
