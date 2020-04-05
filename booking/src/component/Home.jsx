@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { Component } from 'react';
 import '../bookStyle.css'
-//import { render } from 'react-dom'
+// import { render } from 'react-dom'
 import Person from 'react-ionicons/lib/MdPerson'
 import Arrow from 'react-ionicons/lib/IosArrowDropright'
 import Cash from 'react-ionicons/lib/MdCash'
 
 
 class Home extends React.Component{
+    
+    // state = {
+    //     name:'',
+    //   }
+    // อีเว้นท์เมื่อคลิก เพื่อใช้ในการอัพ firebase
+    //   onChange = (e) => {
+    //     this.setState( { [e.target.name]: e.target.value } );
+    //   }
+    
+    //   onSubmit = (e) => {
+    //     e.preventDefault();
+    //     this.props.addData(this.state.name);
+    //     this.setState( { name:''});
+            
     render(){
-        return(
+        return(      
             <section className = "section container" >
                 <div className = "center" >
                     <div className = "nameHotel">
