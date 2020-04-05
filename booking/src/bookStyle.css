@@ -1,18 +1,151 @@
 .nameHotel{
-    height: 90px;
-    margin: 100px;
+    height: 30%;
+    margin: auto;
+    margin-top: 15%;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    font-size: 90px;
+    width: 60%;
+    font-size: 600%;
 }
 
 .center{
     margin: auto;
     padding: 10px;
     width: 60%;
-    border: 1px;
-    border-color: #31312E;
-    background-color: #CFD6C9;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.form{
+    margin:auto;
+    margin-top: 5%;
+    padding:auto;
+    width: 60%;
+    font-weight: 500;
+}
+
+.label{
+    margin-top: 20px;
+}
+
+select{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    /* border: 1px solid #31312E; */
+    /* border-radius: 4px;  */
+}
+
+input[type=date]{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    /* border: 1px solid #31312E; */
+    /* border-radius: 4px;  */
+}
+
+input[type=submit]{
+    background-color: #31312E;
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    color: whitesmoke;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=date]:hover{
+    color: whitesmoke;
+    background-color: #31312E;
+    border-radius: 4px; 
+}
+
+select:hover{
+    color: whitesmoke;
+    background-color: #31312E;
+    border-radius: 4px; 
+}
+
+input[type=submit]:hover{
+    background-color: black;
+}
+
+.result-list{
+    width: 60%;
+    margin: auto;
+}
+
+.result{
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px;
+    width: 100%;
+    background-color:#31312E;
+    color:whitesmoke;
+    text-align: center;
+}
+.list{
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    background-color:whitesmoke;
+}
+
+.row{
+    width: 100%;
+    border-bottom: 1px solid #31312E;
+}
+
+.typeroom{
+    width: 20%;
+    text-align: left;
+}
+
+.number{
+    width: 40%;
+    text-align: left;
+}
+
+.iconPerson{
+    width: 5%;
+    padding: auto;
+    text-align: right;
+}
+
+.amount{
+    width: 8%;
+    padding-left: 1%;
+    text-align: left
+}
+
+.iconCash{
+    width: 5%;
+    text-align: right;
+}
+
+.course{
+    width: 10%;
+    padding-left: 1%;
+    text-align: left;
+}
+
+.iconArrow{
+    width: 7%;
+    padding-right: 1%;
+    text-align: right;
+}
+
+
+
+
