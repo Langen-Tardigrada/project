@@ -11,7 +11,7 @@ class Home extends React.Component{
     // state = {
     //     name:'',
     //   }
-    // อีเว้นท์เมื่อคลิก เพื่อใช้ในการอัพ firebase
+    // // อีเว้นท์เมื่อคลิก เพื่อใช้ในการอัพ firebase
     //   onChange = (e) => {
     //     this.setState( { [e.target.name]: e.target.value } );
     //   }
@@ -20,14 +20,14 @@ class Home extends React.Component{
     //     e.preventDefault();
     //     this.props.addData(this.state.name);
     //     this.setState( { name:''});
-            
+    //   }
     render(){
         return(      
             <section className = "section container" >
                 <div className = "center" >
                     <div className = "nameHotel">
                        . h o t e l  
-                    </div>
+                    </div>  
                     <div>
                         <form action="" className="form" > 
                             <label className="label"> Type Room : </label>
@@ -76,8 +76,23 @@ class Home extends React.Component{
                         </tr>
                     </table>
                 </div>
+                <div className="testRoom">
+                    <div className="room">
+                        <span className="headA">S201</span>
+                        <span className="headB">.hotel</span>
+                    </div> 
+                    <div>
+                        <form>
+                            
+                        </form>
+                    </div>
+                    
+                </div>
+
+                
+
+           
             </section>
-            
         );
     } 
 

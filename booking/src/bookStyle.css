@@ -146,6 +146,35 @@ input[type=submit]:hover{
     text-align: right;
 }
 
+.testRoom{
+    margin-top: 200px;
+}
+
+.room{  
+    border: 1px solid #31312E;
+    color: #31312E;
+    margin: auto;
+    width: 70%;
+}
+
+.headA{
+    display: inline-block;
+    width: 45%;
+    font-size: 300%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+.headB{
+    display: inline-block;
+    width: 45%;
+    margin-left: 9.6%;
+    font-size: 300%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
 
 
 

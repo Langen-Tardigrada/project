@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
 import Home from './component/Home'
-// import firebase from './firebase/firebase'
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
+import firebase from './firebase/firebase'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default class App extends Component {
   //**********For Add Firebase************/
