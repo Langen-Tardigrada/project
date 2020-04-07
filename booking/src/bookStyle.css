@@ -234,7 +234,7 @@ input[type="text"]{
     resize: vertical;
 }
 
-input[type="email"]{
+input[type="tel"]{
     width: 100%;
     margin: 8px;
     padding: 12px 20px;
@@ -273,3 +273,46 @@ input[type="email"]{
     margin-top: 20px;
 }
 
+.headAmodal{
+    display: inline-block;
+    width: 50%;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 0;
+}
+
+.headBmodal{
+    display: inline-block;
+    width: 50%;
+    margin-right: -0.4%;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align: right;
+}
+
+.roomModal{  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    /* border: 1px solid #31312E; */
+    color: #31312E;
+    margin: auto;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.text{
+    color: #3B0D0D;
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    padding-right: 0px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    /* border-bottom: 0.5px solid #3B0D0D; */
+    resize: vertical;
+    font-size: medium ;
+}

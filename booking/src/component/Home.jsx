@@ -4,6 +4,7 @@ import '../bookStyle.css'
 import Person from 'react-ionicons/lib/MdPerson'
 import Arrow from 'react-ionicons/lib/IosArrowDropright'
 import Cash from 'react-ionicons/lib/MdCash'
+import ModalTest from './Modal'
 
 
 class Home extends React.Component{
@@ -20,7 +21,9 @@ class Home extends React.Component{
     //     this.props.addData(this.state.name);
     //     this.setState( { name:''});
     //   }
+    
     render(){
+        
         return(      
             <section className = "section container" >
                 <div className = "center" >
@@ -33,7 +36,7 @@ class Home extends React.Component{
                             <select className="typeRoom">
                                 <option value="Superior">Superior room</option>
                                 <option value="Delux">Delux room </option>
-                                <option value="Sweet">Seeet room</option>
+                                <option value="Sweet">Sweet room</option>
                                 <option value="Suit">Suit room</option>
                                 <option value="Family">Family room</option>
                             </select>
@@ -123,7 +126,7 @@ class Home extends React.Component{
                                 <label className="forms"> Phone number: </label>
                             </div>
                             <div className="col-75">
-                                <input type="email" name="email" placeholder="Jacob_Wilton@example.com"/>
+                                <input type="tel" name="number" placeholder="08xxxxx78"/>
                             </div>
                             <div className="col-25">
                                 <label className="forms"> Check in: </label>
@@ -143,17 +146,24 @@ class Home extends React.Component{
                             <div className="col-25" id="price">
                                 <label className="forms" id="date2"> 3000 bath</label>
                             </div>
-                            
-                            <div className="col-100" id="submit">
-                                <input type="submit" value="submit"/>
-                            </div>
+
+                            <ModalTest/>
+                            {/* <div className="col-100" id="submit">
+                                <input type="submit" value="submit" id="submit" />
+                            </div> */}
                         </form>
                     </div>
                     
                 </div>
+                <div>
+                    
+                </div>
+                
+                
            
             </section>            
         );
+        
     } 
 
 }
