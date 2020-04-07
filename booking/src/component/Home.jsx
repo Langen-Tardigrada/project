@@ -125,17 +125,27 @@ class Home extends React.Component{
                             <div className="col-75">
                                 <input type="email" name="email" placeholder="Jacob_Wilton@example.com"/>
                             </div>
-                            <div className="col-50">
-                                <label className="forms"> Check in: 04/04/2020 </label>
+                            <div className="col-25">
+                                <label className="forms"> Check in: </label>
                             </div>
-                            <div className="col-50">
-                                <label className="forms"> Check out: 05/04/2020 </label>
+                            <div className="col-25" id="date">
+                                <label className="forms" id="date2"> 04/04/2020</label>
                             </div>
-                            <div className="col-50">
-                                <label className="forms"> amount: 3000 bath</label>
+                            <div className="col-25">
+                                <label className="forms" > Check out: </label>
                             </div>
-                            <div className="col-50">
-                                <input type="submit" className="submit" value="submit"/>
+                            <div className="col-25" id="date">
+                                <label className="forms" id="date2"> 04/05/2020</label>
+                            </div>
+                            <div className="col-25">
+                                <label className="forms"> price:</label>
+                            </div>
+                            <div className="col-25" id="price">
+                                <label className="forms" id="date2"> 3000 bath</label>
+                            </div>
+                            
+                            <div className="col-100" id="submit">
+                                <input type="submit" value="submit"/>
                             </div>
                         </form>
                     </div>

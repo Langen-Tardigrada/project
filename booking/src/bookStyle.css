@@ -190,6 +190,7 @@ input[type=submit]:hover{
     margin-top: 30px;
 }
 
+
 .forms{
     padding: 12px 12px 12px 0;
     display: inline-block;
@@ -212,6 +213,14 @@ input[type=submit]:hover{
     width: 50%;
     margin-top: 8px;
 }
+
+.col-100{
+    float: left;
+    width: 100%;
+    margin:auto;
+    margin-top: 8px;
+}
+
 
 input[type="text"]{
     width: 100%;
@@ -236,3 +245,31 @@ input[type="email"]{
     border-bottom: 1px solid #31312E;
     resize: vertical;
 }
+
+#date{
+    text-align: center;
+    font-size: 16px;
+}
+
+#date2{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    padding-right: 0px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    resize: vertical;
+}
+#price{
+    text-align: center;
+    font-size: 16px;
+    margin-left: 0px;
+    
+}
+
+#submit{
+    margin-top: 20px;
+}
+
