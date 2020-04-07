@@ -7,7 +7,6 @@ import Cash from 'react-ionicons/lib/MdCash'
 
 
 class Home extends React.Component{
-    
     // state = {
     //     name:'',
     //   }
@@ -76,23 +75,74 @@ class Home extends React.Component{
                         </tr>
                     </table>
                 </div>
+
+                {/* <form id="add-transaction_form" onSubmit={this.onSubmit}>
+                <div className="form-group">
+                    <label htmlFor="name">Transaction Name:</label>
+                    <input 
+                    type="text" 
+                    name="name" 
+                    className="form-control" 
+                    placeholder="Expense detail ..."
+                    onChange={this.onChange}
+                    value={this.state.name}
+                    />
+                </div>
+                
+
+                <input type="submit" value="Add Transaction" className="btn btn-primary btn-block"/>
+                </form> */}
+
+
                 <div className="testRoom">
-                    <div className="room">
+                    <div className="room"> 
                         <span className="headA">S201</span>
-                        <span className="headB">.hotel</span>
+                        <span className="headB">. h o t e l</span>
                     </div> 
-                    <div>
-                        <form>
-                            
+                    <div className="roomDetail">
+                        <form className="formDetail">
+                            <div className="col-25">
+                                <label className="forms">Name: </label>
+                            </div>
+                            <div className="col-75">
+                                <input type="text" name="fname" placeholder="Jacob"/>
+                            </div>
+                            <div className="col-25">
+                                <label className="forms">Surname: </label>
+                            </div>
+                            <div className="col-75">
+                                <input type="text" name="lname" placeholder="Wilton"/>
+                            </div>
+                            <div className="col-25">
+                                <label className="forms"> Peraonal ID: </label>
+                            </div>
+                            <div className="col-75">
+                                <input type="text" name="id" placeholder="xxxx-xxx-xxx-xxx"/>
+                            </div>
+                            <div className="col-25">
+                                <label className="forms"> Phone number: </label>
+                            </div>
+                            <div className="col-75">
+                                <input type="email" name="email" placeholder="Jacob_Wilton@example.com"/>
+                            </div>
+                            <div className="col-50">
+                                <label className="forms"> Check in: 04/04/2020 </label>
+                            </div>
+                            <div className="col-50">
+                                <label className="forms"> Check out: 05/04/2020 </label>
+                            </div>
+                            <div className="col-50">
+                                <label className="forms"> amount: 3000 bath</label>
+                            </div>
+                            <div className="col-50">
+                                <input type="submit" className="submit" value="submit"/>
+                            </div>
                         </form>
                     </div>
                     
                 </div>
-
-                
-
            
-            </section>
+            </section>            
         );
     } 
 

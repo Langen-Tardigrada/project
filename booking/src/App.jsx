@@ -37,6 +37,29 @@ export default class App extends Component {
   //   this.setState( { test: this.state.test } );
   // }
 
+  find = () => {
+    return true
+  } 
+
+  // validate = () => {
+  //   if (!name || !amount) {
+  //     window.alert('Please fill in ALL data fields.');
+  //     return false;
+  //   } else if ( !isNaN(name)) {
+  //     window.alert('Please fill only TEXT detail in transaction name.');
+  //     return false;
+  //   } else if (+amount === 0) {
+  //     window.alert('Amount CANNOT be zero!');
+  //     return false;
+  //   }
+  //   else if(!Number.isInteger(Number(amount))){
+  //     window.alert('Amount CANNOT be float !')
+  //     return false
+  //   }
+  
+  //   return true;
+  // }
+
   render() {
     return (
       <Home/>

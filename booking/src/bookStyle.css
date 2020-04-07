@@ -151,7 +151,7 @@ input[type=submit]:hover{
 }
 
 .room{  
-    border: 1px solid #31312E;
+    /* border: 1px solid #31312E; */
     color: #31312E;
     margin: auto;
     width: 70%;
@@ -162,7 +162,7 @@ input[type=submit]:hover{
     width: 45%;
     font-size: 300%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     text-align: left;
 }
 
@@ -170,11 +170,69 @@ input[type=submit]:hover{
     display: inline-block;
     width: 45%;
     margin-left: 9.6%;
-    font-size: 300%;
+    font-size: 360%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     text-align: right;
 }
 
+.roomDetail{  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    /* border: 1px solid #31312E; */
+    color: #31312E;
+    margin: auto;
+    margin-top: 100px;
+    width: 70%;
+}
 
+.formDetail{
+    margin-top: 30px;
+}
 
+.forms{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.col-25{
+    float: left;
+    width: 25%;
+    margin-top: 16px;
+}
+
+.col-75{
+    float: left;
+    width: 75%;
+    margin-top: 8px;
+}
+
+.col-50{
+    float: left;
+    width: 50%;
+    margin-top: 8px;
+}
+
+input[type="text"]{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    padding-right: 0px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    resize: vertical;
+}
+
+input[type="email"]{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    padding-right: 0px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    resize: vertical;
+}
