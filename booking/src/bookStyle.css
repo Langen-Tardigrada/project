@@ -28,6 +28,30 @@
     margin-top: 20px;
 }
 
+input[type=email]{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    /* border: 1px solid #31312E; */
+    /* border-radius: 4px;  */
+}
+
+input[type=password]{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    /* border: 1px solid #31312E; */
+    /* border-radius: 4px;  */
+}
+
 select{
     width: 100%;
     margin: 8px;
@@ -41,6 +65,18 @@ select{
 }
 
 input[type=date]{
+    width: 100%;
+    margin: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #31312E;
+    /* border: 1px solid #31312E; */
+    /* border-radius: 4px;  */
+}
+
+input[type=number]{
     width: 100%;
     margin: 8px;
     padding: 12px 20px;
@@ -66,6 +102,12 @@ input[type=submit]{
 }
 
 input[type=date]:hover{
+    color: whitesmoke;
+    background-color: #31312E;
+    border-radius: 4px; 
+}
+
+input[type=number]:hover{
     color: whitesmoke;
     background-color: #31312E;
     border-radius: 4px; 

@@ -23,7 +23,7 @@ export default class AddTransaction extends Component {
               <div className="form-group">
                 <label htmlFor="name">name:</label>
                 <input 
-                  type="text" 
+                  type="text"
                   name="name" 
                   className="form-control" 
                   placeholder="Expense detail ..."
