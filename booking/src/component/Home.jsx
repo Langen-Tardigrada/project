@@ -1,32 +1,57 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../bookStyle.css'
-// import { render } from 'react-dom'
+import { render } from 'react-dom'
 import Person from 'react-ionicons/lib/MdPerson'
 import Arrow from 'react-ionicons/lib/IosArrowDropright'
 import Cash from 'react-ionicons/lib/MdCash'
-import ModalTest from './Modal'
+import NavbarLogin from './NavbarLogin'
 
 
 class Home extends React.Component{
-    // state = {
-    //     name:'',
-    //   }
-    // // อีเว้นท์เมื่อคลิก เพื่อใช้ในการอัพ firebase
-    //   onChange = (e) => {
-    //     this.setState( { [e.target.name]: e.target.value } );
-    //   }
+    state = {
+        name:'',
+      }
+    // อีเว้นท์เมื่อคลิก เพื่อใช้ในการอัพ firebase
+      onChange = (e) => {
+        this.setState( { [e.target.name]: e.target.value } );
+      }
+      onChange2 = (e) => {
+        this.setState( { [e.target.name]: e.target.value } );
+      }
     
-    //   onSubmit = (e) => {
-    //     e.preventDefault();
-    //     this.props.addData(this.state.name);
-    //     this.setState( { name:''});
-    //   }
+      onadd = (e) => {
+        e.preventDefault();
+        this.props.addData();
+        // this.setState( { name:''});
+      }
+        onfind = (e) => {
+            e.preventDefault();
+            this.props.findData();
+            // this.setState( { name:''});
+
     
+      }
     render(){
         
         return(      
-            <section className = "section container" >
-                <div className = "center">                               {/* first page */} 
+            <section className = "section container" > 
+                {/* <div> {/* ----------------------------------------------------------------------------------- Navbar login page */}
+                    {/* <nav className="navbar" role="navigation" aria-label="main navigation">
+                        <div id="navbarBasicExample" className="navbar-menu">
+                            <div className="navbar-end">
+                                <div className="navbar-item">
+                                    <div className="buttons">
+                                        <button className="button-is-light" type="button" >
+                                            Sign In
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div> */} 
+                <NavbarLogin/> {/* ------------------------------------------------------------------- Navbar after login page */}
+                <div className = "center">{/* ---------------------------------------------------------------- Login page */} 
                     <div className = "nameHotel">
                         . h o t e l  
                     </div> 
@@ -38,20 +63,63 @@ class Home extends React.Component{
                         <input type="submit" value="LOGIN"/>
                      </form>  
                 </div>
+                <div className = "center">{/* ---------------------------------------------------------------- Sign in page */} 
+                    <form action="" className="form" > 
+                        <div className="col-25">
+                            <label className="forms">Name: </label>
+                        </div>
+                        <div className="col-75">
+                            <input type="text" name="fname" placeholder="Jacob"/>
+                        </div>
+                        <div className="col-25">
+                            <label className="forms">Surname: </label>
+                        </div>
+                        <div className="col-75">
+                            <input type="text" name="lname" placeholder="Wilton"/>
+                        </div>
+                        <div className="col-25">
+                            <label className="forms"> Email: </label>
+                        </div>
+                        <div className="col-75">
+                            <input type="email" placeholder="Jacob@example.com"/>
+                        </div>
+                        <div className="col-25">
+                            <label className="forms"> Password: </label>
+                        </div>
+                        <div className="col-75">
+                            <input type="password" />
+                        </div>  
+                        <div className="col-25">
+                            <label className="forms"> Confirm password:</label>
+                        </div>
+                        <div className="col-75">
+                            <input type="password" />
+                        </div>
+                        <div className="confirmSigninLabel">
+                            <label for="confirmSignin" > My information is correct.</label>     
+                        </div>
+                        <div className="checkbox" >
+                            <input type="checkbox" className="confirmSignin" name="confirmSignin"/> 
+                        </div>
+                        
+                        <div className="col-100">
+                            <input type="submit" id="submit" value="SIGN IN"/>
+                        </div>
+                     </form>  
+                </div>
                 <div className = "center" >
-                    <div className = "nameHotel">
+                    <div className = "nameHotel"> {/* --------------------------------------------------------- find page */}
                        . h o t e l  
                     </div>
-                     
                     <div>
-                        <form action="" className="form" > 
+                        <form action="" className="form" onSubmit={this.onadd}> 
                             <label className="label"> Type Room : </label>
                             <select className="typeRoom">
-                                <option value="Superior">Superior</option>
-                                <option value="Delux">Delux room </option>
-                                <option value="Sweet">Sweet room</option>
-                                <option value="Suit">Suit room</option>
-                                <option value="Family">Family room</option>
+                                <option value="Superior">Superior &nbsp;&nbsp; ( 2 people )</option>
+                                <option value="Delux">Delux room &nbsp;&nbsp; ( 2 people )</option>
+                                <option value="Sweet">Sweet room &nbsp;&nbsp; ( 2 people )</option>
+                                <option value="Suit">Suit room &nbsp;&nbsp; ( 4 people )</option>
+                                <option value="Family">Family room &nbsp;&nbsp; ( 4 people )</option>
                             </select>
                             <label className="label"> Check in : </label>
                             <input type="date"  name="checkin" value="2020-04-04" min="2020-04-05" max="2021-12-31"/>
@@ -59,11 +127,11 @@ class Home extends React.Component{
                             <input type="date" name="checkout" value="2020-04-05" min="2020-04-05" max="2021-12-31"/>
                             <label className ="label"> Amount : </label>   
                             <input type="number" name="amount" placeholder="0"/>
-                            <input type="submit" value="FIND"/>
+                            <input type="submit" value="FIND" onChange={this.onChange}/>    
                         </form>
                     </div>
                 </div>
-                <div className = "result-list">
+                {/* <div className = "result-list">
                     <div className = "result">
                         Result list
                     </div>
@@ -92,7 +160,7 @@ class Home extends React.Component{
                             </td>
                         </tr>
                     </table>
-                </div>
+                </div> */}
 
                 {/* <form id="add-transaction_form" onSubmit={this.onSubmit}>
                 <div className="form-group">
@@ -105,14 +173,12 @@ class Home extends React.Component{
                     onChange={this.onChange}
                     value={this.state.name}
                     />
-                </div>
-                
-
-                <input type="submit" value="Add Transaction" className="btn btn-primary btn-block"/>
+                </div> */}
+                {/* <input type="submit" value="Add Transaction" className="btn btn-primary btn-block" onChange={this.onChange}/>
                 </form> */}
 
 
-                <div className="testRoom">
+                {/* <div className="testRoom">
                     <div className="room"> 
                         <span className="headA">S201</span>
                         <span className="headB">. h o t e l</span>
@@ -166,19 +232,9 @@ class Home extends React.Component{
                             {/* <div className="col-100" id="submit">
                                 <input type="submit" value="submit" id="submit" />
                             </div> */}
-                        </form>
-                    </div>
-                    
-                </div>
-                <div>
-                    
-                </div>
-                
-                
-           
-            </section>            
-        );
-        
+                        {/* </form> */}
+                        </section>
+            )
     } 
 
 }

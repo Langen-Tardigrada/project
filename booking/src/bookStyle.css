@@ -136,16 +136,15 @@ input[type=submit]:hover{
     background-color:#31312E;
     color:whitesmoke;
     text-align: center;
+    font-size: medium;
 }
 .list{
-    margin: auto;
     padding: 10px;
     width: 100%;
     background-color:whitesmoke;
 }
 
 .row{
-    width: 100%;
     border-bottom: 1px solid #31312E;
 }
 
@@ -155,7 +154,7 @@ input[type=submit]:hover{
 }
 
 .number{
-    width: 40%;
+    width: 30%;
     text-align: left;
 }
 
@@ -358,3 +357,92 @@ input[type="tel"]{
     resize: vertical;
     font-size: medium ;
 }
+
+.navbar{
+    width: 100%;
+    color: whitesmoke;
+    height: 50px;
+    background-color: #31312E;
+    
+}
+
+.buttons{
+    height: 35px;
+    float: right;
+    margin: 7.5px;
+    margin-right: 20px;
+}
+
+.button-is-light{
+    color: whitesmoke;
+    height: 100%;
+    border: 1px solid #31312E;
+    background-color: #31312E;
+    font-size: 16px;
+}
+
+button[type="button"]:hover{
+    border: 1px solid whitesmoke;
+    border-radius: 4px ;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#navName{
+    height: 35px;
+    float: left;
+    margin: 7.5px;
+    margin-left: 20px;
+    border: none;
+}
+
+#navName:hover{
+    color: #F7DAA2;
+    height: 35px;
+    float: left;
+    margin: 7.5px;
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.checkbox{
+    margin-top: -50px;
+    width:30px;
+    height: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.confirmSigninLabel{
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.arrow{
+    border: none;
+    background-color: transparent;
+}
+
+.arrow:hover{
+    background-color: transparent;
+}
+
+.status{
+    color: green;
+}
+
+
+
+
+
