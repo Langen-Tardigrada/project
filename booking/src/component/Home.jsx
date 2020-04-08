@@ -1,25 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../bookStyle.css'
 // import { render } from 'react-dom'
-import Person from 'react-ionicons/lib/MdPerson'
-import Arrow from 'react-ionicons/lib/IosArrowDropright'
-import Cash from 'react-ionicons/lib/MdCash'
+// import Person from 'react-ionicons/lib/MdPerson'
+// import Arrow from 'react-ionicons/lib/IosArrowDropright'
+// import Cash from 'react-ionicons/lib/MdCash'
 
 
 class Home extends React.Component{
-    // state = {
-    //     name:'',
-    //   }
-    // // อีเว้นท์เมื่อคลิก เพื่อใช้ในการอัพ firebase
-    //   onChange = (e) => {
-    //     this.setState( { [e.target.name]: e.target.value } );
-    //   }
+    state = {
+        name:'',
+      }
+    // อีเว้นท์เมื่อคลิก เพื่อใช้ในการอัพ firebase
+      onChange = (e) => {
+        this.setState( { [e.target.name]: e.target.value } );
+      }
+      onChange2 = (e) => {
+        this.setState( { [e.target.name]: e.target.value } );
+      }
     
-    //   onSubmit = (e) => {
-    //     e.preventDefault();
-    //     this.props.addData(this.state.name);
-    //     this.setState( { name:''});
-    //   }
+      onadd = (e) => {
+        e.preventDefault();
+        this.props.addData();
+        // this.setState( { name:''});
+      }
+        onfind = (e) => {
+            e.preventDefault();
+            this.props.findData();
+            // this.setState( { name:''});
+
+    
+      }
     render(){
         return(      
             <section className = "section container" >
@@ -28,7 +38,7 @@ class Home extends React.Component{
                        . h o t e l  
                     </div>  
                     <div>
-                        <form action="" className="form" > 
+                        <form action="" className="form" onSubmit={this.onadd}> 
                             <label className="label"> Type Room : </label>
                             <select className="typeRoom">
                                 <option value="Superior">Superior room</option>
@@ -37,15 +47,18 @@ class Home extends React.Component{
                                 <option value="Suit">Suit room</option>
                                 <option value="Family">Family room</option>
                             </select>
-                            <label className="label"> Check in : </label>
+                            {/* <label className="label"> Check in : </label>
                             <input type="date"  name="checkin" value="2020-04-04" min="2020-04-05" max="2021-12-31"/>
                             <label className="label"> Check out : </label>
-                            <input type="date" name="checkout" value="2020-04-05" min="2020-04-05" max="2021-12-31"/>
-                            <input type="submit" value="FIND"/>   
+                            <input type="date" name="checkout" value="2020-04-05" min="2020-04-05" max="2021-12-31"/> */}
+                            <input type="submit" value="ADD" onChange={this.onChange}/>    
+                        </form>
+                        <form action="" className="form" onSubmit={this.onfind}>
+                            <input type="submit" value="FIND" onChange={this.onChange2}/> 
                         </form>
                     </div>
                 </div>
-                <div className = "result-list">
+                {/* <div className = "result-list">
                     <div className = "result">
                         Result list
                     </div>
@@ -74,7 +87,7 @@ class Home extends React.Component{
                             </td>
                         </tr>
                     </table>
-                </div>
+                </div> */}
 
                 {/* <form id="add-transaction_form" onSubmit={this.onSubmit}>
                 <div className="form-group">
@@ -87,14 +100,12 @@ class Home extends React.Component{
                     onChange={this.onChange}
                     value={this.state.name}
                     />
-                </div>
-                
-
-                <input type="submit" value="Add Transaction" className="btn btn-primary btn-block"/>
+                </div> */}
+                {/* <input type="submit" value="Add Transaction" className="btn btn-primary btn-block" onChange={this.onChange}/>
                 </form> */}
 
 
-                <div className="testRoom">
+                {/* <div className="testRoom">
                     <div className="room"> 
                         <span className="headA">S201</span>
                         <span className="headB">. h o t e l</span>
@@ -140,7 +151,7 @@ class Home extends React.Component{
                         </form>
                     </div>
                     
-                </div>
+                </div> */}
            
             </section>            
         );
