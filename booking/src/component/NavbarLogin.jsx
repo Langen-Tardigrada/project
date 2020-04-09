@@ -1,5 +1,6 @@
 import React from 'react'
 import '../bookStyle.css'
+import Edit from './Edit'
  
 function NavbarLogin(props) {
    return (

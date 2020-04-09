@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import React from 'react'
 import '../bookStyle.css'
+import Arrow from 'react-ionicons/lib/IosArrowDropright'
 
 const customStyles = {
     content : {
@@ -11,12 +12,13 @@ const customStyles = {
       bottom                : 'auto',
       marginRight           : '-50%',
       transform             : 'translate(-50%, -50%)',
-      width                 : '50%',
+      width                 : '45%',
+      height                : '80%',
     }
   };
    
   // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-  Modal.setAppElement(document.getElementById('submit'))
+  Modal.setAppElement(document.getElementById('arrow'))
    
   function ModalTest(props){
     var subtitle;
@@ -36,8 +38,11 @@ const customStyles = {
     }
    
       return (
-        <div className="col-100" id="submit">
-          <input type="submit" value="submit" onClick={openModal}/>
+        <div >
+          {/* <input type="submit" value="submit" onClick={openModal}/> */}
+          <button className="arrow" onClick={openModal} id="arrow" >
+                 <Arrow fontSize="30px" color="#31312E" />
+           </button>
           <Modal
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
@@ -55,7 +60,7 @@ const customStyles = {
                         <label className="forms">Name: </label>
                     </div>
                     <div className="col-75">
-                        <label className="text">Jacob</label>
+                        <label className="text" id="">Jacob</label>
                     </div>
                     <div className="col-25">
                         <label className="forms">Surname: </label>
@@ -78,23 +83,39 @@ const customStyles = {
                     <div className="col-25">
                         <label className="forms"> Check in: </label>
                     </div>
-                    <div className="col-25" id="date">
+                    <div className="col-75" id="date">
                         <label className="forms" id="date2"> 04/04/2020</label>
                     </div>
                     <div className="col-25">
                         <label className="forms" > Check out: </label>
                     </div>
-                    <div className="col-25" id="date">
+                    <div className="col-75" id="date">
                         <label className="forms" id="date2"> 04/05/2020</label>
                     </div>
                     <div className="col-25">
                         <label className="forms"> price:</label>
                     </div>
-                    <div className="col-25" id="price">
+                    <div className="col-75" id="price">
                         <label className="forms" id="date2"> 3000 bath</label>
                     </div>
+                    <form>
+                        <div className="confirmSigninLabel">
+                            <label for="confirmSignin" > My information is correct.</label>     
+                        </div>
+                        <div className="checkbox" >
+                            <input type="checkbox" className="confirmSignin" name="confirmSignin"/> 
+                        </div>
+                        <div className="col-25">
+                            <input type="submit" value="BOOKING" id="booking"/>
+                        </div>
+                    </form>
+                    <div className="col-25" id="close">
+                        <button onClick={closeModal} className="close">CLOSE</button>
+                    </div>
+                    
                 </div>
-                <button onClick={closeModal}>close</button>
+                
+                
             </div> 
             </Modal>
         </div>

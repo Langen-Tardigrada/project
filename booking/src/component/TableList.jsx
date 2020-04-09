@@ -6,6 +6,7 @@ import Arrow from 'react-ionicons/lib/IosArrowDropright'
 import Cash from 'react-ionicons/lib/MdCash'
 import Checkmarkoutline from 'react-ionicons/lib/IosCheckmarkCircleOutline'
 import Checkmark from 'react-ionicons/lib/IosCheckmarkCircle'
+import ModalTest from './Modal'
 
 export default function TableList(props) {
 
@@ -13,9 +14,6 @@ export default function TableList(props) {
 
   return (
     <div className = "result-list">
-        {/* <div className = "result">
-            Result list
-        </div> */}
         <table className = "result">
             <th>  
                 Result List
@@ -43,16 +41,16 @@ export default function TableList(props) {
                     3000
                 </td>
                 <td className = "iconCheckmark">
-                    <Checkmark fontSize="30px" color="green"/>
+                    {/* <Checkmark fontSize="30px" color="green"/> */}
+                    <Checkmark fontSize="30px" color="salmon"/>
                 </td>
-                <td className = "status" >
-                    booked
+                <td>
+                    {/* <p className = "status"> booked </p> */}
+                    <p className = "status2"> unreserved </p>
                 </td>
 
                 <td className = "iconArrow">
-                    <button className="arrow">
-                        <Arrow fontSize="30px" color="#31312E" />
-                    </button>
+                    <ModalTest/>
                 </td>
                 </tr>
                 <tbody >
@@ -64,6 +62,11 @@ export default function TableList(props) {
                     }
                 </tbody>
             </table>
+        <table className="cancelButton">
+            <button className="cancelBooked">
+                CANCEL ALL RESERVATIONS
+            </button>
+        </table>
     </div>
                 
     

@@ -1,10 +1,18 @@
-import React from 'react';
+//import React from 'react';
 import '../bookStyle.css'
-import { render } from 'react-dom'
-import Person from 'react-ionicons/lib/MdPerson'
-import Arrow from 'react-ionicons/lib/IosArrowDropright'
-import Cash from 'react-ionicons/lib/MdCash'
+import React, { Component } from 'react'
+// import { render } from 'react-dom'
+// import Person from 'react-ionicons/lib/MdPerson'
+// import Arrow from 'react-ionicons/lib/IosArrowDropright'
+// import Cash from 'react-ionicons/lib/MdCash'
 import NavbarLogin from './NavbarLogin'
+import ModalProfile from './ModalProfile'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Findpage from './Findpage'
+import About from './About'
+
+
 
 
 class Home extends React.Component{
@@ -33,9 +41,10 @@ class Home extends React.Component{
       }
     render(){
         
-        return(      
-            <section className = "section container" > 
-                {/* <div> {/* ----------------------------------------------------------------------------------- Navbar login page */}
+        return(   
+            <Router>
+                <section className = "section container" > 
+                {/* <div> {/* ----------------------------------------------------------------------------------- Navbar login page sign in */}
                     {/* <nav className="navbar" role="navigation" aria-label="main navigation">
                         <div id="navbarBasicExample" className="navbar-menu">
                             <div className="navbar-end">
@@ -50,7 +59,7 @@ class Home extends React.Component{
                         </div>
                     </nav>
                 </div> */} 
-                <NavbarLogin/> {/* ------------------------------------------------------------------- Navbar after login page */}
+                <NavbarLogin/> {/* ------------------------------------------------------------------- Navbar after login page wth findpage */}
                 <div className = "center">{/* ---------------------------------------------------------------- Login page */} 
                     <div className = "nameHotel">
                         . h o t e l  
@@ -60,12 +69,13 @@ class Home extends React.Component{
                         <input type="email" placeholder="Jacob@example.com"/>
                         <label className="label"> password : </label>
                         <input type="password" />
-                        <input type="submit" value="LOGIN"/>
+                        <Link to="/Findpage"><input type="submit" value="LOGIN"/></Link> {/*loginปุ่ม*/}{/*find page 112 */}
+                        <Router path="/Findpage" Component={Findpage}/>
                      </form>  
                 </div>
                 <div className = "center">{/* ---------------------------------------------------------------- Sign in page */} 
                     <form action="" className="form" > 
-                        <div className="col-25">
+                        <div className="col-25">  
                             <label className="forms">Name: </label>
                         </div>
                         <div className="col-75">
@@ -79,7 +89,7 @@ class Home extends React.Component{
                         </div>
                         <div className="col-25">
                             <label className="forms"> Email: </label>
-                        </div>
+                        </div>}
                         <div className="col-75">
                             <input type="email" placeholder="Jacob@example.com"/>
                         </div>
@@ -101,14 +111,13 @@ class Home extends React.Component{
                         <div className="checkbox" >
                             <input type="checkbox" className="confirmSignin" name="confirmSignin"/> 
                         </div>
-                        
                         <div className="col-100">
-                            <input type="submit" id="submit" value="SIGN IN"/>
+                            <input type="submit" id="submit" value="SIGN IN"/> {/* login */}
                         </div>
                      </form>  
                 </div>
                 <div className = "center" >
-                    <div className = "nameHotel"> {/* --------------------------------------------------------- find page */}
+                    <div className = "nameHotel"> {/* --------------------------------------------------------- find page table */}
                        . h o t e l  
                     </div>
                     <div>
@@ -233,8 +242,74 @@ class Home extends React.Component{
                                 <input type="submit" value="submit" id="submit" />
                             </div> */}
                         {/* </form> */}
-                        </section>
-            )
+                <div className="center">{/* ---------------------------------------------------------- edit profile */}
+                    <div className = "nameHotel">
+                        .my profile  
+                    </div> 
+                    <div className="profile">
+                        <div className="col-25">
+                            <label className="forms">Name: </label>
+                        </div>
+                        <div className="col-75">
+                            <label className="text" id="">Jacob</label>
+                        </div>
+                        <div className="col-25">
+                            <label className="forms">Surname: </label>
+                        </div>
+                        <div className="col-75">
+                            <label className="text">Wilson</label>
+                        </div>
+
+                        <div className="col-25">
+                            <label className="forms"> Email </label>
+                        </div>
+                        <div className="col-75" id="date">
+                            <label className="forms" id="date2"> Jacob_wilson@example.com</label>
+                        </div>
+                        <div className="col-25">
+                            <label className="forms" > Password </label>
+                        </div>
+                        <div className="col-75" id="date">
+                            <label className="forms" id="date2"> xxxxxxxxxxxx </label>
+                        </div>
+                        <div className="col-25">
+                            <label className="forms"> Peraonal ID: </label>
+                        </div>
+                        <div className="col-75">
+                            <label className="text" >xxxx-xxx-xxx-xxx</label>
+                        </div>
+                        <div className="col-25">
+                            <label className="forms"> Phone number: </label>
+                        </div>
+                        <div className="col-75">
+                            <label className="text">08xxxxxx78</label>
+                        </div>
+                        <div className="col-100">
+                            <div id="edit">
+                                <ModalProfile/>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div className="footer"> {/* ------------------------------------------------------------------------- footer send to about us page */}
+                    . h o t e l  &nbsp;&nbsp; | &nbsp;&nbsp;
+                    <button className="footerBtn">
+                        a b o u t &nbsp;&nbsp;&nbsp;&nbsp;u s
+                    </button>
+                </div>
+
+                {/* <div className="App container">
+            <Route path="/Findpage.jsx" component={} />
+            <Route path="/about" component={About} />
+                </div> */}
+
+            
+            </section>
+            </Router>   
+            
+        ) 
     } 
 
 }
