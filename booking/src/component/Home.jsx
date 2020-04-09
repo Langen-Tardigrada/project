@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 // import Cash from 'react-ionicons/lib/MdCash'
 import NavbarLogin from './NavbarLogin'
 import ModalProfile from './ModalProfile'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import Findpage from './Findpage'
 import About from './About'
@@ -70,7 +70,7 @@ class Home extends React.Component{
                         <label className="label"> password : </label>
                         <input type="password" />
                         <Link to="/Findpage"><input type="submit" value="LOGIN"/></Link> {/*loginปุ่ม*/}{/*find page 112 */}
-                        <Router path="/Findpage" Component={Findpage}/>
+                        
                      </form>  
                 </div>
                 <div className = "center">{/* ---------------------------------------------------------------- Sign in page */} 
@@ -305,8 +305,13 @@ class Home extends React.Component{
             <Route path="/about" component={About} />
                 </div> */}
 
-            
-            </section>
+                <Switch>
+                    <Route path="/Findpage">
+                        <Findpage />
+                    </Route>
+                </Switch>
+                </section>
+                
             </Router>   
             
         ) 

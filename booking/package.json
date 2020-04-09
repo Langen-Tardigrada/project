@@ -12,7 +12,6 @@
     "firebase": "^7.13.2",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
-    "nodemon": "^2.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ionicons": "^3.1.4",
@@ -26,7 +25,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +43,9 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
   "author": "",
   "license": "ISC"
 }
